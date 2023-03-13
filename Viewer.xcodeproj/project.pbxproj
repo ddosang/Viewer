@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE091B6029BEDBFD006E15BD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B5F29BEDBFD006E15BD /* BaseView.swift */; };
+		AE091B6229BEDC23006E15BD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B6129BEDC23006E15BD /* BaseTableViewCell.swift */; };
+		AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B6329BEDC41006E15BD /* BaseCollectionViewCell.swift */; };
+		AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B6529BEDC65006E15BD /* BaseViewController.swift */; };
 		AE7DA29C29B185E400EA137A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DA29B29B185E400EA137A /* AppDelegate.swift */; };
 		AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DA29D29B185E400EA137A /* SceneDelegate.swift */; };
 		AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A429B185E500EA137A /* Assets.xcassets */; };
@@ -14,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE091B5F29BEDBFD006E15BD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		AE091B6129BEDC23006E15BD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		AE091B6329BEDC41006E15BD /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE091B6529BEDC65006E15BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AE091B6B29BEE232006E15BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE7DA29829B185E400EA137A /* Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7DA29B29B185E400EA137A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7DA29D29B185E400EA137A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +41,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE091B5D29BEDBCC006E15BD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AE091B5F29BEDBFD006E15BD /* BaseView.swift */,
+				AE091B6129BEDC23006E15BD /* BaseTableViewCell.swift */,
+				AE091B6329BEDC41006E15BD /* BaseCollectionViewCell.swift */,
+				AE091B6529BEDC65006E15BD /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		AE091B5E29BEDBD0006E15BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +82,7 @@
 		AE7DA29A29B185E400EA137A /* Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				AE091B5D29BEDBCC006E15BD /* Base */,
 				AE091B5E29BEDBD0006E15BD /* Supporting Files */,
 				AE7DA2A629B185E500EA137A /* LaunchScreen.storyboard */,
 			);
@@ -127,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE7DA2A829B185E500EA137A /* LaunchScreen.storyboard in Resources */,
+				AE091B5C29BEDB9A006E15BD /* MainViewController.xib in Resources */,
 				AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE091B5B29BEDB9A006E15BD /* MainViewController.swift in Sources */,
 				AE7DA29C29B185E400EA137A /* AppDelegate.swift in Sources */,
 				AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */,
+				AE091B6229BEDC23006E15BD /* BaseTableViewCell.swift in Sources */,
+				AE091B6029BEDBFD006E15BD /* BaseView.swift in Sources */,
+				AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */,
+				AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
