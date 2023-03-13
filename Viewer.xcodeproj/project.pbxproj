@@ -19,6 +19,10 @@
 		AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A429B185E500EA137A /* Assets.xcassets */; };
 		AE7DA2A829B185E500EA137A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A629B185E500EA137A /* LaunchScreen.storyboard */; };
 		AEF367E429BEF56000045339 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367E329BEF56000045339 /* String+toDate.swift */; };
+		AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367EF29BF68A500045339 /* ChatViewController.swift */; };
+		AEF367F429BF68A500045339 /* MeChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */; };
+		AEF367F529BF68A500045339 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF367F129BF68A500045339 /* ChatViewController.xib */; };
+		AEF367F629BF68A500045339 /* MeChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367F229BF68A500045339 /* MeChatCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		AE7DA2A429B185E500EA137A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7DA2A729B185E500EA137A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEF367E329BEF56000045339 /* String+toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toDate.swift"; sourceTree = "<group>"; };
+		AEF367EF29BF68A500045339 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatCollectionViewCell.xib; sourceTree = "<group>"; };
+		AEF367F129BF68A500045339 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		AEF367F229BF68A500045339 /* MeChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeChatCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 				AE7DA2A629B185E500EA137A /* LaunchScreen.storyboard */,
 				AE091B5A29BEDB9A006E15BD /* MainViewController.xib */,
 				AE091B5929BEDB9A006E15BD /* MainViewController.swift */,
+				AEF367EF29BF68A500045339 /* ChatViewController.swift */,
+				AEF367F129BF68A500045339 /* ChatViewController.xib */,
+				AEF367F229BF68A500045339 /* MeChatCollectionViewCell.swift */,
+				AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */,
 			);
 			path = Viewer;
 			sourceTree = "<group>";
@@ -177,6 +189,8 @@
 			files = (
 				AE7DA2A829B185E500EA137A /* LaunchScreen.storyboard in Resources */,
 				AE091B5C29BEDB9A006E15BD /* MainViewController.xib in Resources */,
+				AEF367F429BF68A500045339 /* MeChatCollectionViewCell.xib in Resources */,
+				AEF367F529BF68A500045339 /* ChatViewController.xib in Resources */,
 				AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +210,8 @@
 				AE091B6029BEDBFD006E15BD /* BaseView.swift in Sources */,
 				AE6159AF29BEEF24002F15B7 /* Message.swift in Sources */,
 				AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */,
+				AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */,
+				AEF367F629BF68A500045339 /* MeChatCollectionViewCell.swift in Sources */,
 				AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
