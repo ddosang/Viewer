@@ -18,6 +18,7 @@
 		AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DA29D29B185E400EA137A /* SceneDelegate.swift */; };
 		AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A429B185E500EA137A /* Assets.xcassets */; };
 		AE7DA2A829B185E500EA137A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A629B185E500EA137A /* LaunchScreen.storyboard */; };
+		AECC8B2929CD5E21006C58BB /* String+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECC8B2829CD5E21006C58BB /* String+nib.swift */; };
 		AEF367E429BEF56000045339 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367E329BEF56000045339 /* String+toDate.swift */; };
 		AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367EF29BF68A500045339 /* ChatViewController.swift */; };
 		AEF367F429BF68A500045339 /* MeChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */; };
@@ -39,6 +40,7 @@
 		AE7DA29D29B185E400EA137A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE7DA2A429B185E500EA137A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7DA2A729B185E500EA137A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AECC8B2829CD5E21006C58BB /* String+nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+nib.swift"; sourceTree = "<group>"; };
 		AEF367E329BEF56000045339 /* String+toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toDate.swift"; sourceTree = "<group>"; };
 		AEF367EF29BF68A500045339 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		AEF367E229BEF55500045339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AECC8B2829CD5E21006C58BB /* String+nib.swift */,
 				AEF367E329BEF56000045339 /* String+toDate.swift */,
 			);
 			path = Utils;
@@ -212,6 +215,7 @@
 				AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */,
 				AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */,
 				AEF367F629BF68A500045339 /* MeChatCollectionViewCell.swift in Sources */,
+				AECC8B2929CD5E21006C58BB /* String+nib.swift in Sources */,
 				AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
