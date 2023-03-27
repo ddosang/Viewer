@@ -46,9 +46,12 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MeChatCollectionViewCell.identifier, for: indexPath) as? MeChatCollectionViewCell {
-            return CGSize(width: UIScreen.main.bounds.width, height: cell.cellHeight())
+            var estimatedFrame = String(repeating: "t", count: 4 * (indexPath.row + 1)).estimatedFrame(with: 17)
+            estimatedFrame.size.height += 10
+            
+            return CGSize(width: collectionView.frame.width, height: estimatedFrame.height + 10)
         }
-
-        return CGSize(width: UIScreen.main.bounds.width, height: 50)
+        
+        return CGSize(width: collectionView.frame.width, height: 50)
     }
 }

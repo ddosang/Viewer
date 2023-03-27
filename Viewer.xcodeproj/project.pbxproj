@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE01FCEC29D13830004C563F /* String+estimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE01FCEB29D13830004C563F /* String+estimatedFrame.swift */; };
 		AE091B5B29BEDB9A006E15BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B5929BEDB9A006E15BD /* MainViewController.swift */; };
 		AE091B5C29BEDB9A006E15BD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE091B5A29BEDB9A006E15BD /* MainViewController.xib */; };
 		AE091B6029BEDBFD006E15BD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B5F29BEDBFD006E15BD /* BaseView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE01FCEB29D13830004C563F /* String+estimatedFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+estimatedFrame.swift"; sourceTree = "<group>"; };
 		AE091B5929BEDB9A006E15BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AE091B5A29BEDB9A006E15BD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AE091B5F29BEDBFD006E15BD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -115,10 +117,10 @@
 				AE7DA2A629B185E500EA137A /* LaunchScreen.storyboard */,
 				AE091B5A29BEDB9A006E15BD /* MainViewController.xib */,
 				AE091B5929BEDB9A006E15BD /* MainViewController.swift */,
-				AEF367EF29BF68A500045339 /* ChatViewController.swift */,
 				AEF367F129BF68A500045339 /* ChatViewController.xib */,
-				AEF367F229BF68A500045339 /* MeChatCollectionViewCell.swift */,
+				AEF367EF29BF68A500045339 /* ChatViewController.swift */,
 				AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */,
+				AEF367F229BF68A500045339 /* MeChatCollectionViewCell.swift */,
 			);
 			path = Viewer;
 			sourceTree = "<group>";
@@ -128,6 +130,7 @@
 			children = (
 				AECC8B2829CD5E21006C58BB /* String+nib.swift */,
 				AEF367E329BEF56000045339 /* String+toDate.swift */,
+				AE01FCEB29D13830004C563F /* String+estimatedFrame.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */,
 				AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */,
 				AEF367F629BF68A500045339 /* MeChatCollectionViewCell.swift in Sources */,
+				AE01FCEC29D13830004C563F /* String+estimatedFrame.swift in Sources */,
 				AECC8B2929CD5E21006C58BB /* String+nib.swift in Sources */,
 				AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */,
 			);

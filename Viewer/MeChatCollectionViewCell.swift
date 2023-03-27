@@ -19,18 +19,11 @@ class MeChatCollectionViewCell: BaseCollectionViewCell {
         setup()
     }
     
-    
     override func setup() {
         messageView.backgroundColor = .systemBlue
-        messageView.layer.cornerRadius = 10
+        messageView.layer.cornerRadius = 15
         messageLabel.textColor = .white
         messageLabel.lineBreakMode = .byWordWrapping
         messageLabel.lineBreakStrategy = .hangulWordPriority
-    }
-
-    func cellHeight() -> CGFloat {
-        messageLabel.sizeToFit()
-        
-        return messageLabel.frame.height + 20
     }
 }
