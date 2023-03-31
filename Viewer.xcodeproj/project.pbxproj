@@ -22,6 +22,11 @@
 		AED9096629D6A68700C2BE35 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED9096529D6A68700C2BE35 /* MainViewController.xib */; };
 		AED9096929D6B05000C2BE35 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED9096829D6B05000C2BE35 /* MessageViewModel.swift */; };
 		AED9096C29D6B55D00C2BE35 /* View+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED9096B29D6B55D00C2BE35 /* View+identifier.swift */; };
+		AED9097029D6B99A00C2BE35 /* Date+string.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED9096F29D6B99A00C2BE35 /* Date+string.swift */; };
+		AED9097329D6BC7100C2BE35 /* IdolChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED9097129D6BC7100C2BE35 /* IdolChatCollectionViewCell.swift */; };
+		AED9097429D6BC7100C2BE35 /* IdolChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED9097229D6BC7100C2BE35 /* IdolChatCollectionViewCell.xib */; };
+		AEE9495E29D6C9B000DC37D8 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9495D29D6C9B000DC37D8 /* DateView.swift */; };
+		AEE9496029D6C9CF00DC37D8 /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE9495F29D6C9CF00DC37D8 /* DateView.xib */; };
 		AEF367E429BEF56000045339 /* String+date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367E329BEF56000045339 /* String+date.swift */; };
 		AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF367EF29BF68A500045339 /* ChatViewController.swift */; };
 		AEF367F429BF68A500045339 /* MeChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */; };
@@ -47,6 +52,11 @@
 		AED9096529D6A68700C2BE35 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AED9096829D6B05000C2BE35 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		AED9096B29D6B55D00C2BE35 /* View+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+identifier.swift"; sourceTree = "<group>"; };
+		AED9096F29D6B99A00C2BE35 /* Date+string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+string.swift"; sourceTree = "<group>"; };
+		AED9097129D6BC7100C2BE35 /* IdolChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		AED9097229D6BC7100C2BE35 /* IdolChatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdolChatCollectionViewCell.xib; sourceTree = "<group>"; };
+		AEE9495D29D6C9B000DC37D8 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		AEE9495F29D6C9CF00DC37D8 /* DateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateView.xib; sourceTree = "<group>"; };
 		AEF367E329BEF56000045339 /* String+date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+date.swift"; sourceTree = "<group>"; };
 		AEF367EF29BF68A500045339 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -132,6 +142,10 @@
 				AEF367EF29BF68A500045339 /* ChatViewController.swift */,
 				AEF367F029BF68A500045339 /* MeChatCollectionViewCell.xib */,
 				AEF367F229BF68A500045339 /* MeChatCollectionViewCell.swift */,
+				AED9097229D6BC7100C2BE35 /* IdolChatCollectionViewCell.xib */,
+				AED9097129D6BC7100C2BE35 /* IdolChatCollectionViewCell.swift */,
+				AEE9495F29D6C9CF00DC37D8 /* DateView.xib */,
+				AEE9495D29D6C9B000DC37D8 /* DateView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 				AEF367E329BEF56000045339 /* String+date.swift */,
 				AE01FCEB29D13830004C563F /* String+estimatedFrame.swift */,
 				AED9096B29D6B55D00C2BE35 /* View+identifier.swift */,
+				AED9096F29D6B99A00C2BE35 /* Date+string.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -231,8 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE9496029D6C9CF00DC37D8 /* DateView.xib in Resources */,
 				AE7DA2A829B185E500EA137A /* LaunchScreen.storyboard in Resources */,
 				AEF367F429BF68A500045339 /* MeChatCollectionViewCell.xib in Resources */,
+				AED9097429D6BC7100C2BE35 /* IdolChatCollectionViewCell.xib in Resources */,
 				AED9096629D6A68700C2BE35 /* MainViewController.xib in Resources */,
 				AEF367F529BF68A500045339 /* ChatViewController.xib in Resources */,
 				AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */,
@@ -250,7 +267,9 @@
 				AE7DA29C29B185E400EA137A /* AppDelegate.swift in Sources */,
 				AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */,
 				AEF367E429BEF56000045339 /* String+date.swift in Sources */,
+				AED9097329D6BC7100C2BE35 /* IdolChatCollectionViewCell.swift in Sources */,
 				AED9096929D6B05000C2BE35 /* MessageViewModel.swift in Sources */,
+				AEE9495E29D6C9B000DC37D8 /* DateView.swift in Sources */,
 				AE091B6229BEDC23006E15BD /* BaseTableViewCell.swift in Sources */,
 				AE091B6029BEDBFD006E15BD /* BaseView.swift in Sources */,
 				AE6159AF29BEEF24002F15B7 /* Message.swift in Sources */,
@@ -258,6 +277,7 @@
 				AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */,
 				AEF367F629BF68A500045339 /* MeChatCollectionViewCell.swift in Sources */,
 				AED9096C29D6B55D00C2BE35 /* View+identifier.swift in Sources */,
+				AED9097029D6B99A00C2BE35 /* Date+string.swift in Sources */,
 				AE01FCEC29D13830004C563F /* String+estimatedFrame.swift in Sources */,
 				AECC8B2929CD5E21006C58BB /* String+nib.swift in Sources */,
 				AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */,

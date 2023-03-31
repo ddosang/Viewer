@@ -17,11 +17,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1E-zb-1iR">
+                        <rect key="frame" x="260" y="64.666666666666671" width="28.666666666666686" height="13.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" systemColor="systemGray3Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-aF-B0g">
-                        <rect key="frame" x="303.66666666666669" y="0.0" width="51.333333333333314" height="68"/>
+                        <rect key="frame" x="293.66666666666669" y="0.0" width="61.333333333333314" height="78"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkQ-re-fRG">
-                                <rect key="frame" x="5" y="5" width="41.333333333333336" height="58"/>
+                                <rect key="frame" x="10" y="5" width="41.333333333333336" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,21 +38,24 @@
                             <constraint firstItem="zkQ-re-fRG" firstAttribute="centerX" secondItem="RU2-aF-B0g" secondAttribute="centerX" id="3h0-gi-cFt"/>
                             <constraint firstAttribute="height" secondItem="zkQ-re-fRG" secondAttribute="height" constant="10" id="QPg-XK-7EW"/>
                             <constraint firstItem="zkQ-re-fRG" firstAttribute="centerY" secondItem="RU2-aF-B0g" secondAttribute="centerY" id="ev4-Uy-Tie"/>
-                            <constraint firstAttribute="width" secondItem="zkQ-re-fRG" secondAttribute="width" constant="10" id="vVb-0G-TD9"/>
+                            <constraint firstAttribute="width" secondItem="zkQ-re-fRG" secondAttribute="width" constant="20" id="vVb-0G-TD9"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="w1E-zb-1iR" firstAttribute="bottom" secondItem="RU2-aF-B0g" secondAttribute="bottom" id="2ZS-7X-qNp"/>
                 <constraint firstItem="RU2-aF-B0g" firstAttribute="width" relation="lessThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.66" id="3IF-Uz-5tm"/>
-                <constraint firstAttribute="bottom" secondItem="RU2-aF-B0g" secondAttribute="bottom" constant="10" id="L4W-x3-tUa"/>
+                <constraint firstAttribute="bottom" secondItem="RU2-aF-B0g" secondAttribute="bottom" id="L4W-x3-tUa"/>
                 <constraint firstAttribute="trailing" secondItem="RU2-aF-B0g" secondAttribute="trailing" constant="20" id="XeQ-Yv-Wc7"/>
+                <constraint firstItem="RU2-aF-B0g" firstAttribute="leading" secondItem="w1E-zb-1iR" secondAttribute="trailing" constant="5" id="Z8c-uu-EC0"/>
                 <constraint firstItem="RU2-aF-B0g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mYn-LX-FsE"/>
             </constraints>
             <size key="customSize" width="527" height="172"/>
             <connections>
                 <outlet property="messageLabel" destination="zkQ-re-fRG" id="WgE-FE-oRB"/>
                 <outlet property="messageView" destination="RU2-aF-B0g" id="pIG-KV-Mfh"/>
+                <outlet property="timeLabel" destination="w1E-zb-1iR" id="lI0-qf-p3y"/>
             </connections>
             <point key="canvasLocation" x="229.7709923664122" y="10.563380281690142"/>
         </collectionViewCell>
@@ -54,6 +63,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

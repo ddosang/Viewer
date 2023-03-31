@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DateView" customModule="Viewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ct7-9b-jyd">
+                    <rect key="frame" x="171" y="12.333333333333334" width="51" height="19.333333333333329"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-AA-4ui">
+                            <rect key="frame" x="10" y="2.6666666666666652" width="31" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Lc6-AA-4ui" secondAttribute="width" constant="20" id="JRt-ei-cB7"/>
+                        <constraint firstAttribute="height" secondItem="Lc6-AA-4ui" secondAttribute="height" constant="5" id="MnB-bE-Pjs"/>
+                        <constraint firstItem="Lc6-AA-4ui" firstAttribute="centerY" secondItem="Ct7-9b-jyd" secondAttribute="centerY" id="VeX-Wo-EQg"/>
+                        <constraint firstItem="Lc6-AA-4ui" firstAttribute="centerX" secondItem="Ct7-9b-jyd" secondAttribute="centerX" id="sNA-0W-4gk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ct7-9b-jyd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2CE-Pw-UpN"/>
+                <constraint firstItem="Ct7-9b-jyd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d1a-Nl-uDs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundView" destination="Ct7-9b-jyd" id="T8x-et-8z8"/>
+                <outlet property="dateLabel" destination="Lc6-AA-4ui" id="6BL-Nr-pZd"/>
+            </connections>
+            <point key="canvasLocation" x="-109.16030534351144" y="155.63380281690141"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

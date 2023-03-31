@@ -11,6 +11,7 @@ class MeChatCollectionViewCell: BaseCollectionViewCell {
     
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +23,5 @@ class MeChatCollectionViewCell: BaseCollectionViewCell {
         messageLabel.textColor = .white
         messageLabel.lineBreakMode = .byWordWrapping
         messageLabel.lineBreakStrategy = .hangulWordPriority
-        
-        
-        messageView.backgroundColor = .systemPink
     }
 }
