@@ -8,11 +8,15 @@
 import UIKit
 
 class BaseView: UIView {
-
+    
+    // xib 로 만들어서 불러올 때
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
+        bindConstraints()
     }
     
+    // 코드로 만들어서 불러올 때
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -20,7 +24,7 @@ class BaseView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
     }
     
     func setup() {}

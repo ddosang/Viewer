@@ -11,6 +11,8 @@ class BaseCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
+        bindConstraints()
     }
     
     override init(frame: CGRect) {
@@ -20,7 +22,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
     }
     
     func setup() {}

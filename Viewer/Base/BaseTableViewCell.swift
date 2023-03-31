@@ -11,6 +11,8 @@ class BaseTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
+        bindConstraints()
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -20,7 +22,7 @@ class BaseTableViewCell: UITableViewCell {
     }
     
     required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
     }
     
     func setup() {}
