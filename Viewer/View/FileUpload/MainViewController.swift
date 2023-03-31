@@ -21,14 +21,13 @@ class MainViewController: BaseViewController {
         self.present(documentPickerVC, animated: true)
     }
     
-    var messageList = [Message]()
+    let viewModel = MessageViewModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         
     }
 
@@ -41,7 +40,7 @@ extension MainViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         parseCSV(with: urls.first!)
         
-        let vc = ChatViewController()
+        let vc = ChatViewController(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -66,7 +65,7 @@ extension MainViewController: UIDocumentPickerDelegate {
             let separated = arr.map ({ $0.components(separatedBy: "|") })
             
             // Message 객체로 만들기
-            self.messageList = separated.compactMap { Message(data: $0) }
+            self.viewModel.messageList = separated.compactMap { Message(data: $0) }
         } catch {
             print("Error reading CSV file")
         }

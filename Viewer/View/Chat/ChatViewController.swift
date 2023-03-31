@@ -8,8 +8,19 @@
 import UIKit
 
 class ChatViewController: BaseViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let viewModel: MessageViewModel
+    
+    init(viewModel: MessageViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: ChatViewController.identifier, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
