@@ -24,16 +24,13 @@ class ChatViewController: BaseViewController {
         collectionView.allowsSelection = false
         collectionView.register(MeChatCollectionViewCell.identifier.nib, forCellWithReuseIdentifier: MeChatCollectionViewCell.identifier)
         
-        let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        collectionView.collectionViewLayout = layout
-        
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
 }
 
 extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 30
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

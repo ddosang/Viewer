@@ -40,6 +40,9 @@ class MainViewController: BaseViewController {
 extension MainViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         parseCSV(with: urls.first!)
+        
+        let vc = ChatViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {

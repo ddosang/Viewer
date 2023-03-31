@@ -16,7 +16,6 @@ class MeChatCollectionViewCell: BaseCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setup()
     }
     
     override func setup() {
@@ -25,5 +24,8 @@ class MeChatCollectionViewCell: BaseCollectionViewCell {
         messageLabel.textColor = .white
         messageLabel.lineBreakMode = .byWordWrapping
         messageLabel.lineBreakStrategy = .hangulWordPriority
+        
+        
+        messageView.backgroundColor = .systemPink
     }
 }
