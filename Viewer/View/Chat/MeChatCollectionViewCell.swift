@@ -8,8 +8,6 @@
 import UIKit
 
 class MeChatCollectionViewCell: BaseCollectionViewCell {
-
-    static let identifier = "MeChatCollectionViewCell"
     
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
