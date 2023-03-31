@@ -21,7 +21,7 @@ struct Message: Codable {
     }
     
     init(nickname: String, type: MessageType, message: String, dateStr: String) {
-        self.init(nickname: nickname, type: type, message: message, date: dateStr.toDate())
+        self.init(nickname: nickname, type: type, message: message, date: dateStr.date)
     }
     
     init(data: [String]) {

@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func toDate() -> Date {
+    var date: Date {
         // utcString -> utc
         let utcDateFormatter = DateFormatter()
         utcDateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
