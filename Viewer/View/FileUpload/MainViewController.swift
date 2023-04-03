@@ -19,6 +19,8 @@ class MainViewController: BaseViewController {
         documentPickerVC.allowsMultipleSelection = false
         documentPickerVC.modalPresentationStyle = .formSheet
         self.present(documentPickerVC, animated: true)
+        
+//        MessageViewModel.fetchMsg()
     }
     
     let viewModel = MessageViewModel()
@@ -28,7 +30,7 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+//        MessageViewModel.storeMsg()
     }
 
     override func setup() {
@@ -70,4 +72,7 @@ extension MainViewController: UIDocumentPickerDelegate {
             print("Error reading CSV file")
         }
     }
+    
+    // 날짜별로 쪼개서 [[Message]] 형태로 만들어서 core data 에 저장.
+    // core data 에서 읽어올 땐 어쩌지...? 다 읽어야됨...?
 }
