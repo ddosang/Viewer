@@ -7,6 +7,17 @@
 
 import Foundation
 
+struct IdolMessage {
+    let nickname: String
+    let dailyMessages: [DailyMessage]
+}
+
+struct DailyMessage {
+    let day: Date
+    let index: Int // dailyMessages 에서의 index
+    let messages: [Message]
+}
+
 struct Message: Codable {
     let nickname: String // 루디
     let type: MessageType // TEXT
@@ -25,9 +36,16 @@ struct Message: Codable {
     }
     
     init(data: [String]) {
+        
+        // 아이돌이 | 를 써도 메시지가 잘리지 않도록.
+        var msg = ""
+        for i in 2..<data.count - 1 {
+            msg += data[i]
+        }
+        
         self.init(nickname: data[0],
                   type: MessageType(rawValue: data[1])!,
-                  message: data[2],
+                  message: msg,
                   dateStr: data.last!)
     }
     

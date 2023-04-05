@@ -16,11 +16,25 @@ extension MessageModel {
         return NSFetchRequest<MessageModel>(entityName: "MessageModel")
     }
 
-    @NSManaged public var nickname: String?
-    @NSManaged public var type: String?
-    @NSManaged public var message: String?
-    @NSManaged public var date: Date?
+    @NSManaged public var nickname: String
+    @NSManaged public var type: String
+    @NSManaged public var message: String
+    @NSManaged public var date: Date
 
+    var msg: Message {
+        get {
+            return Message(nickname: self.nickname,
+                           type: MessageType(rawValue: self.type) ?? .text,
+                           message: self.message,
+                           date: self.date)
+        }
+        set {
+            self.nickname = newValue.nickname
+            self.type = newValue.type.rawValue
+            self.message = newValue.message
+            self.date = newValue.date
+        }
+    }
 }
 
 extension MessageModel : Identifiable {
