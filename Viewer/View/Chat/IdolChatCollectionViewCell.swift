@@ -39,8 +39,7 @@ class IdolChatCollectionViewCell: BaseCollectionViewCell {
         messageView.backgroundColor = .systemGray4
         messageView.layer.cornerRadius = 15
         messageLabel.textColor = .black
-        messageLabel.lineBreakMode = .byWordWrapping
-        messageLabel.lineBreakStrategy = .hangulWordPriority
+        messageLabel.lineBreakMode = .byCharWrapping
     }
     
     override func prepareForReuse() {

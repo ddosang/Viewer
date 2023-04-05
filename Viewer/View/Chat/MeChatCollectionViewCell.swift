@@ -21,7 +21,6 @@ class MeChatCollectionViewCell: BaseCollectionViewCell {
         messageView.backgroundColor = .systemBlue
         messageView.layer.cornerRadius = 15
         messageLabel.textColor = .white
-        messageLabel.lineBreakMode = .byWordWrapping
-        messageLabel.lineBreakStrategy = .hangulWordPriority
+        messageLabel.lineBreakMode = .byCharWrapping
     }
 }
