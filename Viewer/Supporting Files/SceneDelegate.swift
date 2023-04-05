@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
             
         // view 계층도를 코드로 잡는다.
-        let viewController = MainViewController();
+        let viewController = ChatListViewController(viewModel: MessageViewModel());
         let navigation = UINavigationController(rootViewController: viewController)
             
         // window의 rootViewController 를 내가 만든 첫화면Controller로 설정.
