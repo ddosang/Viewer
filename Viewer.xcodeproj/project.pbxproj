@@ -18,6 +18,10 @@
 		AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DA29D29B185E400EA137A /* SceneDelegate.swift */; };
 		AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A429B185E500EA137A /* Assets.xcassets */; };
 		AE7DA2A829B185E500EA137A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A629B185E500EA137A /* LaunchScreen.storyboard */; };
+		AEB2DA9929DD7BD900B5A690 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB2DA9729DD7BD900B5A690 /* ChatListViewController.swift */; };
+		AEB2DA9A29DD7BD900B5A690 /* ChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB2DA9829DD7BD900B5A690 /* ChatListViewController.xib */; };
+		AEB2DA9D29DD7BF700B5A690 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB2DA9B29DD7BF700B5A690 /* ChatListTableViewCell.swift */; };
+		AEB2DA9E29DD7BF700B5A690 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB2DA9C29DD7BF700B5A690 /* ChatListTableViewCell.xib */; };
 		AECC8B2929CD5E21006C58BB /* String+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECC8B2829CD5E21006C58BB /* String+nib.swift */; };
 		AED9096629D6A68700C2BE35 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED9096529D6A68700C2BE35 /* MainViewController.xib */; };
 		AED9096929D6B05000C2BE35 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED9096829D6B05000C2BE35 /* MessageViewModel.swift */; };
@@ -48,6 +52,10 @@
 		AE7DA29D29B185E400EA137A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE7DA2A429B185E500EA137A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7DA2A729B185E500EA137A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEB2DA9729DD7BD900B5A690 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		AEB2DA9829DD7BD900B5A690 /* ChatListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
+		AEB2DA9B29DD7BF700B5A690 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		AEB2DA9C29DD7BF700B5A690 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		AECC8B2829CD5E21006C58BB /* String+nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+nib.swift"; sourceTree = "<group>"; };
 		AED9096529D6A68700C2BE35 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AED9096829D6B05000C2BE35 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +143,17 @@
 			path = Viewer;
 			sourceTree = "<group>";
 		};
+		AEB2DA9629DD7BBC00B5A690 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				AEB2DA9729DD7BD900B5A690 /* ChatListViewController.swift */,
+				AEB2DA9829DD7BD900B5A690 /* ChatListViewController.xib */,
+				AEB2DA9B29DD7BF700B5A690 /* ChatListTableViewCell.swift */,
+				AEB2DA9C29DD7BF700B5A690 /* ChatListTableViewCell.xib */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
 		AED9096729D6A68900C2BE35 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				AEE5737829D6999C001DD84F /* FileUpload */,
+				AEB2DA9629DD7BBC00B5A690 /* ChatList */,
 				AED9096729D6A68900C2BE35 /* Chat */,
 			);
 			path = View;
@@ -251,7 +271,9 @@
 				AEF367F429BF68A500045339 /* MeChatCollectionViewCell.xib in Resources */,
 				AED9097429D6BC7100C2BE35 /* IdolChatCollectionViewCell.xib in Resources */,
 				AED9096629D6A68700C2BE35 /* MainViewController.xib in Resources */,
+				AEB2DA9E29DD7BF700B5A690 /* ChatListTableViewCell.xib in Resources */,
 				AEF367F529BF68A500045339 /* ChatViewController.xib in Resources */,
+				AEB2DA9A29DD7BD900B5A690 /* ChatListViewController.xib in Resources */,
 				AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE091B5B29BEDB9A006E15BD /* MainViewController.swift in Sources */,
+				AEB2DA9D29DD7BF700B5A690 /* ChatListTableViewCell.swift in Sources */,
 				AE7DA29C29B185E400EA137A /* AppDelegate.swift in Sources */,
+				AEB2DA9929DD7BD900B5A690 /* ChatListViewController.swift in Sources */,
 				AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */,
 				AEF367E429BEF56000045339 /* String+date.swift in Sources */,
 				AED9097329D6BC7100C2BE35 /* IdolChatCollectionViewCell.swift in Sources */,

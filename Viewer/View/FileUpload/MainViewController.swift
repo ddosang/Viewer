@@ -40,7 +40,7 @@ extension MainViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         parseCSV(with: urls.first!)
         
-        let vc = ChatViewController(viewModel: viewModel)
+        let vc = ChatListViewController(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }
     
