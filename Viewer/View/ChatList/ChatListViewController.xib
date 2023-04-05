@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatListViewController" customModule="Viewer" customModuleProvider="target">
             <connections>
+                <outlet property="indicator" destination="hq0-WR-evB" id="5WK-IX-zbZ"/>
                 <outlet property="tableView" destination="omg-u6-ykR" id="ktj-jy-Yjf"/>
                 <outlet property="view" destination="op6-39-ef1" id="Hjv-FC-Y19"/>
             </connections>
@@ -24,11 +25,20 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hq0-WR-evB">
+                    <rect key="frame" x="176.66666666666666" y="418.66666666666669" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="pgE-JN-A4c"/>
+                        <constraint firstAttribute="height" constant="40" id="tUF-Rk-lGS"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="nzU-yL-Fkh"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="nzU-yL-Fkh" firstAttribute="bottom" secondItem="omg-u6-ykR" secondAttribute="bottom" id="AWj-hU-TKL"/>
+                <constraint firstItem="hq0-WR-evB" firstAttribute="centerX" secondItem="nzU-yL-Fkh" secondAttribute="centerX" id="Amm-wA-pCH"/>
+                <constraint firstItem="hq0-WR-evB" firstAttribute="centerY" secondItem="nzU-yL-Fkh" secondAttribute="centerY" id="M7d-76-HcJ"/>
                 <constraint firstItem="omg-u6-ykR" firstAttribute="top" secondItem="nzU-yL-Fkh" secondAttribute="top" id="Nfo-CI-UXn"/>
                 <constraint firstItem="omg-u6-ykR" firstAttribute="leading" secondItem="nzU-yL-Fkh" secondAttribute="leading" id="XTd-dj-EIF"/>
                 <constraint firstItem="nzU-yL-Fkh" firstAttribute="trailing" secondItem="omg-u6-ykR" secondAttribute="trailing" id="gd9-L0-asz"/>

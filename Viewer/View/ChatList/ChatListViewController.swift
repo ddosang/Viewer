@@ -10,15 +10,8 @@ import UniformTypeIdentifiers
 
 class ChatListViewController: BaseViewController {
     
-    @objc func uploadFile() {
-        let supportedTypes: [UTType] = [UTType.data]
-        let documentPickerVC = UIDocumentPickerViewController(forOpeningContentTypes: supportedTypes)
-        documentPickerVC.delegate = self
-        documentPickerVC.allowsMultipleSelection = false
-        documentPickerVC.modalPresentationStyle = .formSheet
-        self.present(documentPickerVC, animated: true)
-    }
-
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel: MessageViewModel
@@ -36,10 +29,13 @@ class ChatListViewController: BaseViewController {
         super.viewDidLoad()
     }
 
-    override func setup() {
+    override func setUpNaviation() {
         title = "채팅"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(uploadFile))
-        
+    }
+    
+    override func setup() {
+        indicator.hidesWhenStopped = true
         tableViewSetup()
     }
     
@@ -49,6 +45,15 @@ class ChatListViewController: BaseViewController {
         tableView.register(ChatListTableViewCell.identifier.nib, forCellReuseIdentifier: ChatListTableViewCell.identifier)
     }
 
+    @objc func uploadFile() {
+        let supportedTypes: [UTType] = [UTType.data]
+        let documentPickerVC = UIDocumentPickerViewController(forOpeningContentTypes: supportedTypes)
+        documentPickerVC.delegate = self
+        documentPickerVC.allowsMultipleSelection = false
+        documentPickerVC.modalPresentationStyle = .formSheet
+        indicator.startAnimating()
+        self.present(documentPickerVC, animated: true)
+    }
 }
 
 extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -79,9 +84,14 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
 extension ChatListViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         parseCSV(with: urls.first!)
+        indicator.stopAnimating()
+        
+        let vc = ChatViewController(viewModel: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        indicator.stopAnimating()
         controller.dismiss(animated: true)
     }
     
