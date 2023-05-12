@@ -14,6 +14,10 @@
 		AE091B6429BEDC41006E15BD /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B6329BEDC41006E15BD /* BaseCollectionViewCell.swift */; };
 		AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE091B6529BEDC65006E15BD /* BaseViewController.swift */; };
 		AE6159AF29BEEF24002F15B7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6159AE29BEEF24002F15B7 /* Message.swift */; };
+		AE6A072D2A0E698D00B74552 /* IdolModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A072C2A0E698D00B74552 /* IdolModel+CoreDataClass.swift */; };
+		AE6A072F2A0E69A200B74552 /* IdolModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A072E2A0E69A200B74552 /* IdolModel+CoreDataProperties.swift */; };
+		AE6A07312A0E7DC700B74552 /* DailyMessageModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A07302A0E7DC700B74552 /* DailyMessageModel+CoreDataClass.swift */; };
+		AE6A07332A0E7DEA00B74552 /* DailyMessageModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A07322A0E7DEA00B74552 /* DailyMessageModel+CoreDataProperties.swift */; };
 		AE7DA29C29B185E400EA137A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DA29B29B185E400EA137A /* AppDelegate.swift */; };
 		AE7DA29E29B185E400EA137A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DA29D29B185E400EA137A /* SceneDelegate.swift */; };
 		AE7DA2A529B185E500EA137A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7DA2A429B185E500EA137A /* Assets.xcassets */; };
@@ -50,6 +54,10 @@
 		AE091B6529BEDC65006E15BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AE091B6B29BEE232006E15BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE6159AE29BEEF24002F15B7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AE6A072C2A0E698D00B74552 /* IdolModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IdolModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AE6A072E2A0E69A200B74552 /* IdolModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IdolModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AE6A07302A0E7DC700B74552 /* DailyMessageModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyMessageModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AE6A07322A0E7DEA00B74552 /* DailyMessageModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyMessageModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AE7DA29829B185E400EA137A /* Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7DA29B29B185E400EA137A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7DA29D29B185E400EA137A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +124,10 @@
 			children = (
 				AE6159AE29BEEF24002F15B7 /* Message.swift */,
 				AEB2DA8929DB046B00B5A690 /* Model.xcdatamodeld */,
+				AE6A072C2A0E698D00B74552 /* IdolModel+CoreDataClass.swift */,
+				AE6A072E2A0E69A200B74552 /* IdolModel+CoreDataProperties.swift */,
+				AE6A07302A0E7DC700B74552 /* DailyMessageModel+CoreDataClass.swift */,
+				AE6A07322A0E7DEA00B74552 /* DailyMessageModel+CoreDataProperties.swift */,
 				AEB2DA8C29DB049F00B5A690 /* MessageModel+CoreDataClass.swift */,
 				AEB2DA8D29DB049F00B5A690 /* MessageModel+CoreDataProperties.swift */,
 			);
@@ -296,6 +308,7 @@
 			files = (
 				AEB2DA8F29DB049F00B5A690 /* MessageModel+CoreDataProperties.swift in Sources */,
 				AE091B5B29BEDB9A006E15BD /* MainViewController.swift in Sources */,
+				AE6A072F2A0E69A200B74552 /* IdolModel+CoreDataProperties.swift in Sources */,
 				AEB2DA9D29DD7BF700B5A690 /* ChatListTableViewCell.swift in Sources */,
 				AE7DA29C29B185E400EA137A /* AppDelegate.swift in Sources */,
 				AEB2DA9929DD7BD900B5A690 /* ChatListViewController.swift in Sources */,
@@ -305,8 +318,11 @@
 				AED9096929D6B05000C2BE35 /* MessageViewModel.swift in Sources */,
 				AEB2DA8E29DB049F00B5A690 /* MessageModel+CoreDataClass.swift in Sources */,
 				AEE9495E29D6C9B000DC37D8 /* DateView.swift in Sources */,
+				AE6A07332A0E7DEA00B74552 /* DailyMessageModel+CoreDataProperties.swift in Sources */,
 				AE091B6229BEDC23006E15BD /* BaseTableViewCell.swift in Sources */,
+				AE6A07312A0E7DC700B74552 /* DailyMessageModel+CoreDataClass.swift in Sources */,
 				AE091B6029BEDBFD006E15BD /* BaseView.swift in Sources */,
+				AE6A072D2A0E698D00B74552 /* IdolModel+CoreDataClass.swift in Sources */,
 				AE6159AF29BEEF24002F15B7 /* Message.swift in Sources */,
 				AE091B6629BEDC65006E15BD /* BaseViewController.swift in Sources */,
 				AEF367F329BF68A500045339 /* ChatViewController.swift in Sources */,

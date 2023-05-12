@@ -16,6 +16,7 @@ extension MessageModel {
         return NSFetchRequest<MessageModel>(entityName: "MessageModel")
     }
 
+    @NSManaged public var dailyMessages: DailyMessageModel
     @NSManaged public var nickname: String
     @NSManaged public var type: String
     @NSManaged public var message: String

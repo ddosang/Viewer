@@ -7,15 +7,37 @@
 
 import Foundation
 
-struct IdolMessage {
+struct Idol {
     let nickname: String
-    let dailyMessages: [DailyMessage]
+    let profileImageName: String
+    let lastDate: Date
+    let lastMessage: String
+    let dailyMessages = [DailyMessage]()
+    
+    init(idolModel: IdolModel) {
+        self.nickname = idolModel.nickname
+        self.profileImageName = idolModel.profileImageName
+        self.lastDate = idolModel.lastDate
+        self.lastMessage = idolModel.lastMessage
+    }
+    
+    init(nickname: String, profileImageName: String, lastDate: Date, lastMessage: String) {
+        self.nickname = nickname
+        self.profileImageName = profileImageName
+        self.lastDate = lastDate
+        self.lastMessage = lastMessage
+    }
 }
 
 struct DailyMessage {
     let day: Date
     let index: Int // dailyMessages 에서의 index
-    let messages: [Message]
+    let messages = [Message]()
+    
+    init(day: Date, index: Int) {
+        self.day = day
+        self.index = index
+    }
 }
 
 struct Message: Codable {
@@ -23,6 +45,13 @@ struct Message: Codable {
     let type: MessageType // TEXT
     let message: String // 처음이라 조금 어렵넹ㅎㅎㅎ
     let date: Date // 2021-2-1 8:14 AM
+    
+    init(messageModel: MessageModel) {
+        self.nickname = messageModel.nickname
+        self.type = MessageType(rawValue: messageModel.type) ?? .text
+        self.message = messageModel.message
+        self.date = messageModel.date
+    }
     
     init(nickname: String, type: MessageType, message: String, date: Date) {
         self.nickname = nickname

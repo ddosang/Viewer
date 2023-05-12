@@ -16,6 +16,7 @@ class ChatListViewController: BaseViewController {
     
     let viewModel: MessageViewModel
     
+    
     init(viewModel: MessageViewModel) {
         self.viewModel = viewModel
         super.init(nibName: ChatListViewController.identifier, bundle: nil)
@@ -27,6 +28,8 @@ class ChatListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.idolList = MessageViewModel.fetchIdol()
     }
 
     override func setUpNaviation() {
@@ -58,15 +61,16 @@ class ChatListViewController: BaseViewController {
 
 extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.idolList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: ChatListTableViewCell.identifier, for: indexPath) as? ChatListTableViewCell {
+            let idol = viewModel.idolList[indexPath.row]
             cell.profileImageView.image = UIImage(named: "test")
-            cell.nameLabel.text = "루디"
-            cell.messageLabel.text = "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum."
-            cell.dateLabel.text = "2023-04-05"
+            cell.nameLabel.text = idol.nickname
+            cell.messageLabel.text = idol.lastMessage
+            cell.dateLabel.text = idol.lastDate.timeString
             
             return cell
         }

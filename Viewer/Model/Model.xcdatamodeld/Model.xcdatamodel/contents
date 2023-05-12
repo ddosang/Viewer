@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="MessageList" representedClassName="MessageList" syncable="YES" codeGenerationType="class">
-        <attribute name="fifthList" optional="YES" attributeType="Transformable"/>
-        <attribute name="firstList" optional="YES" attributeType="Transformable" valueTransformerName="[Message]"/>
-        <attribute name="fourthList" optional="YES" attributeType="Transformable"/>
-        <attribute name="secondList" optional="YES" attributeType="Transformable"/>
-        <attribute name="thirdList" optional="YES" attributeType="Transformable"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DailyMessageModel" representedClassName="DailyMessageModel" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="messages" optional="YES" attributeType="String"/>
+        <relationship name="idol" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IdolModel" inverseName="dailyMessages" inverseEntity="IdolModel"/>
+        <relationship name="message" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="MessageModel" inverseName="dailyMessage" inverseEntity="MessageModel"/>
     </entity>
-    <entity name="MessageModel" representedClassName="MessageModel" syncable="YES">
+    <entity name="IdolModel" representedClassName="IdolModel" isAbstract="YES" syncable="YES">
+        <attribute name="lastDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastMessage" optional="YES" attributeType="String"/>
+        <attribute name="nickname" optional="YES" attributeType="String"/>
+        <attribute name="profileImageName" optional="YES" attributeType="String"/>
+        <relationship name="dailyMessages" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="DailyMessageModel" inverseName="idol" inverseEntity="DailyMessageModel"/>
+    </entity>
+    <entity name="MessageModel" representedClassName="MessageModel" isAbstract="YES" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" customClassName="[Message]"/>
         <attribute name="message" optional="YES" attributeType="String"/>
         <attribute name="nickname" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="dailyMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyMessageModel" inverseName="message" inverseEntity="DailyMessageModel"/>
     </entity>
 </model>
