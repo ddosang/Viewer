@@ -11,7 +11,7 @@ extension String {
     var date: Date {
         // utcString -> utc
         let utcDateFormatter = DateFormatter()
-        utcDateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        utcDateFormatter.dateFormat = "yyyy-MM-dd HH:mm a"
         utcDateFormatter.timeZone = TimeZone(identifier: "UTC")
         
         return utcDateFormatter.date(from: self)!

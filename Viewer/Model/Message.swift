@@ -12,31 +12,35 @@ struct Idol {
     let profileImageName: String
     let lastDate: Date
     let lastMessage: String
-    let dailyMessages = [DailyMessage]()
+    // let lastIndex: Int
+    let dailyMessages: [DailyMessage]
     
     init(idolModel: IdolModel) {
         self.nickname = idolModel.nickname
         self.profileImageName = idolModel.profileImageName
         self.lastDate = idolModel.lastDate
         self.lastMessage = idolModel.lastMessage
+        self.dailyMessages = [DailyMessage]()
     }
     
-    init(nickname: String, profileImageName: String, lastDate: Date, lastMessage: String) {
+    init(nickname: String, profileImageName: String, lastDate: Date, lastMessage: String, dailyMessages: [DailyMessage] = [DailyMessage]()) {
         self.nickname = nickname
         self.profileImageName = profileImageName
         self.lastDate = lastDate
         self.lastMessage = lastMessage
+        self.dailyMessages = dailyMessages
     }
 }
 
 struct DailyMessage {
     let day: Date
     let index: Int // dailyMessages 에서의 index
-    let messages = [Message]()
+    let messages: [Message]
     
-    init(day: Date, index: Int) {
+    init(day: Date, index: Int, messages: [Message] = [Message]()) {
         self.day = day
         self.index = index
+        self.messages = messages
     }
 }
 
@@ -66,7 +70,7 @@ struct Message: Codable {
     
     init(data: [String]) {
         
-        // 아이돌이 | 를 써도 메시지가 잘리지 않도록.
+        // , 를 써도 메시지가 잘리지 않도록.
         var msg = ""
         for i in 2..<data.count - 1 {
             msg += data[i]

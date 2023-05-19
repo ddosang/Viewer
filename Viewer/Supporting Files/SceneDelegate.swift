@@ -14,9 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-            
-
-        MessageViewModel.storeIdol()
         
         // view 계층도를 코드로 잡는다.
         let viewController = ChatListViewController(viewModel: MessageViewModel());

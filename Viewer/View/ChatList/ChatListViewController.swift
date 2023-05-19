@@ -46,6 +46,7 @@ class ChatListViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(ChatListTableViewCell.identifier.nib, forCellReuseIdentifier: ChatListTableViewCell.identifier)
+//        tableView.register(ChastListTableViewCell.self, forCellReuseIdentifier: ChatListTableViewCell.identifier) // TODO: 이건 왜 안 되는지 원인을 알아내기!!
     }
 
     @objc func uploadFile() {
@@ -89,9 +90,6 @@ extension ChatListViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         parseCSV(with: urls.first!)
         indicator.stopAnimating()
-        
-        let vc = ChatViewController(viewModel: viewModel)
-        navigationController?.pushViewController(vc, animated: true)
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
@@ -106,19 +104,49 @@ extension ChatListViewController: UIDocumentPickerDelegate {
             
             var arr = dataEncoded.components(separatedBy: "\r\n")
             
-            // 맨 마지막 한 줄이 비어있다면 삭제.
+            // 맨 첫번째 줄 삭제, 맨 마지막 비어있는 한 줄 삭제.
+            arr.removeFirst()
             if let last = arr.last,
                last == "" {
                 arr.removeLast()
             }
             
             // 구분자 | 로 분리.
-            let separated = arr.map ({ $0.components(separatedBy: "|") })
+            let separated = arr.map ({ $0.components(separatedBy: ",") })
             
             // Message 객체로 만들기
             self.viewModel.messageList = separated.compactMap { Message(data: $0) }
+            
+            let idol = makeIdol(messages: self.viewModel.messageList)
+            
         } catch {
             print("Error reading CSV file")
         }
+    }
+    
+    func makeIdol(messages: [Message]) -> Idol? {
+        // TODO: 이미 있는 아이돌이면 저장 못하게 막을 것.
+        guard let firstMessage = messages.first,
+              let lastMessage = messages.last else { return nil }
+        
+        var index = 0
+        var previousDate = firstMessage.date // 이거 일까지만으로 처리해야됨.
+        var arr = [Message]()
+        var dailyArr = [DailyMessage]()
+        
+        for message in messages {
+            if previousDate == message.date {
+                arr.append(message)
+            } else {
+                dailyArr.append(DailyMessage(day: previousDate, index: index, messages: arr))
+                
+                index += 1
+                // 날짜가 달라지면 지금까지 arr 저장하고 다음 arr 에 저장.
+                previousDate = message.date
+                arr = [message]
+            }
+        }
+        
+        return Idol(nickname: firstMessage.nickname, profileImageName: "", lastDate: lastMessage.date, lastMessage: lastMessage.message, dailyMessages: dailyArr)
     }
 }
