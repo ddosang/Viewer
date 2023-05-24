@@ -89,6 +89,7 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
 extension ChatListViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         parseCSV(with: urls.first!)
+        tableView.reloadData()
         indicator.stopAnimating()
     }
     
@@ -117,7 +118,9 @@ extension ChatListViewController: UIDocumentPickerDelegate {
             // Message 객체로 만들기
             self.viewModel.messageList = separated.compactMap { Message(data: $0) }
             
-            let idol = makeIdol(messages: self.viewModel.messageList)
+            if let idol = makeIdol(messages: self.viewModel.messageList) {
+                viewModel.idolList.insert(idol, at: 0)
+            }
             
         } catch {
             print("Error reading CSV file")

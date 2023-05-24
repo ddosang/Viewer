@@ -14,4 +14,18 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    var dayString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        
+        return dateFormatter.string(from: self)
+    }
+    
+    var day: Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: self)
+        
+        return Int("\(components.year)\(components.month)\(components.day)")!
+    }
 }

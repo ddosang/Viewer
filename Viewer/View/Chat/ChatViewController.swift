@@ -50,19 +50,19 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return viewModel.idolList[0].dailyMessages.last?.messages.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DateView.identifier, for: indexPath) as? DateView {
-            view.dateLabel.text = "2023년 3월 31일 금요일"
+            view.dateLabel.text = viewModel.idolList[0].dailyMessages.last?.day.dayString ?? "비었어요."
             return view
         }
         return UICollectionReusableView()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        var estimatedFrame = "2023년 3월 31일 금요일".estimatedFrame(with: 17)
+        var estimatedFrame = (viewModel.idolList[0].dailyMessages.last?.day.dayString ?? "비었어요.").estimatedFrame(with: 17)
         estimatedFrame.size.height += 5
         
         return CGSize(width: collectionView.frame.width, height: estimatedFrame.height + 5)
@@ -72,15 +72,15 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdolChatCollectionViewCell.identifier, for: indexPath) as? IdolChatCollectionViewCell {
             if indexPath.row == 0 {
                 cell.isProfileShowing = true
-                cell.nameLabel.text = viewModel.messageList[indexPath.row].nickname
-            } else if viewModel.messageList[indexPath.row - 1].date.timeString != viewModel.messageList[indexPath.row].date.timeString {
+                cell.nameLabel.text = viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row].nickname
+            } else if viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row - 1].date.timeString != viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row].date.timeString {
                 cell.isProfileShowing = true
-                cell.nameLabel.text = viewModel.messageList[indexPath.row].nickname
+                cell.nameLabel.text = viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row].nickname
             }
             
             
-            cell.messageLabel.text = viewModel.messageList[indexPath.row].message
-            cell.timeLabel.text = viewModel.messageList[indexPath.row].date.timeString
+            cell.messageLabel.text = viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row].message
+            cell.timeLabel.text = viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row].date.timeString
             return cell
         }
         return UICollectionViewCell()
@@ -88,12 +88,12 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdolChatCollectionViewCell.identifier, for: indexPath) as? IdolChatCollectionViewCell {
-            var estimatedFrame = viewModel.messageList[indexPath.row].message.estimatedFrame(with: 17)
+            var estimatedFrame = viewModel.idolList[0].dailyMessages.last!.messages[indexPath.row].message.estimatedFrame(with: 17)
             estimatedFrame.size.height += 10 // messageView height
             
             if indexPath.row == 0 {
                 estimatedFrame.size.height += 25 // nameLabel height
-            } else if viewModel.messageList[indexPath.row - 1].date.timeString != viewModel.messageList[indexPath.row].date.timeString {
+            } else if viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row - 1].date.timeString != viewModel.idolList[0].dailyMessages.last?.messages[indexPath.row].date.timeString {
                 estimatedFrame.size.height += 25
             }
             
