@@ -11,6 +11,15 @@ class ChatViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    lazy var calendarView: UICalendarView = {
+        let view = UICalendarView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.wantsDateDecorations = true
+        view.isHidden = true
+        view.delegate = self
+        return view
+    }()
+    
     let viewModel: MessageViewModel
     
     init(viewModel: MessageViewModel) {
@@ -29,6 +38,10 @@ class ChatViewController: BaseViewController {
         
     }
     
+    override func setUpNaviation() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "calendar"), style: .plain, target: self, action: #selector(presentCalendar))
+    }
+    
     override func setup() {
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -41,6 +54,20 @@ class ChatViewController: BaseViewController {
         collectionView.register(DateView.identifier.nib,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: DateView.identifier)
+        
+        view.addSubview(calendarView)
+    }
+    
+    override func bindConstraints() {
+        NSLayoutConstraint.activate([
+            calendarView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            calendarView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            calendarView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    @objc func presentCalendar() {
+        calendarView.isHidden = !(calendarView.isHidden)
     }
 }
 
@@ -102,6 +129,8 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         return CGSize(width: collectionView.frame.width, height: 50)
     }
-    
+}
+
+extension ChatViewController: UICalendarViewDelegate {
     
 }
